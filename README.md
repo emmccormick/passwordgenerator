@@ -1,1 +1,3 @@
 # Password Generator Starter Code
+
+JavaScript code includes the main function generatePassword() and a variable bank of the available character options for the password including the lowercase alphabet, numbers 1-9, and special characters. The function begins with a prompt that has the user enter in a number between 8 and 128, numbers outside of this and non-number answers produce an alert and restart the function. The user can then confirm which of the 4 options they want in their password and the function randomizes these and concatonates the final string, displaying the random generated password in the given box. 

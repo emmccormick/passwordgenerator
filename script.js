@@ -1,27 +1,22 @@
 // Assignment code here
+
+// main function & variable banks
 function generatePassword() {
   var lowercaseBank = 'abcdefghijklmnopqrustuvwxyz'
-  console.log(lowercaseBank);
   var numberBank = '0123456789'
   var characterBank = '!@#$%^&*()'
   var finalBank = ''; // abcABC123!$%  abc123 ABC123!$%
   var finalPW = '';
-  
-// GIVEN I need a new, secure password
-// WHEN I click the button to generate a password
-// THEN I am presented with a series of prompts for password criteria
-// WHEN prompted for password criteria
-// THEN I select which criteria to include in the password
-// WHEN prompted for the length of the password
-// THEN I choose a length of at least 8 characters and no more than 128 characters
+
+// Choose a length of at least 8 characters and no more than 128 characters
   var desiredLength = window.prompt("How long do you want your password to be? Pick a number between 8 and 128.")
   desiredLength = parseInt(desiredLength)  
   if (desiredLength < 8 || desiredLength > 128 || isNaN(desiredLength)) {
       // incorrect PW length
       window.alert("Please enter a valid length");
       generatePassword();
-    }
-  else{
+  }
+      else{
     // correct PW length entry
 
     // WHEN prompted for character types to include in the password
@@ -61,10 +56,7 @@ function generatePassword() {
             // concatenate that onto the finalPW
             finalPW += randoLetter;
           }
-          // pass validation
-          // WHEN all prompts are answered
-          // THEN a password is generated that matches the selected criteria
-          // WHEN the password is generated
+
           // THEN the password is either displayed in an alert or written to the page
           return finalPW;
         }
